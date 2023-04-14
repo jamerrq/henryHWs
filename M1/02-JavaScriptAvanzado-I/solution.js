@@ -1,4 +1,11 @@
 /**
+ * Solución Tarea # 02 Módulo 1 Henry Full Stack Course FT
+ *    AUTOR: Jamer José Rebolledo Quiroz
+ *   GitHub: https://github.com/jamerrq
+ * Linkedin: https://linkedin.com/in/jamerrq
+ */
+
+/**
  * EJERCICIO 1
  * Investiga cuál es la diferencia entre declarar una variable con var y
  * directamente asignarle un valor.

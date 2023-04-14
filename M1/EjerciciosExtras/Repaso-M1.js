@@ -6,9 +6,9 @@ const {
 } = require('./DS.js');
 
 /**
- * Solución Ejercicios de Repaso Módulo 1 Henry Full Stack Course
- * Autor: Jamer José Rebolledo Quiroz
- * Github: https://github.com/jamerrq
+ * Solución Ejercicios de repaso Módulo 1 Henry Full Stack Course FT
+ *    AUTOR: Jamer José Rebolledo Quiroz
+ *   GitHub: https://github.com/jamerrq
  * Linkedin: https://linkedin.com/in/jamerrq
  */
 

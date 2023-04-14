@@ -1,10 +1,13 @@
 'use strict';
 
 /**
- * Solución Tarea # 06 Módulo 1 Henry Full Stack Course
- * Autor: Jamer José Rebolledo Quiroz
- * Github: https://github.com/jamerrq
+ * Solución Tarea # 06 Módulo 1 Henry Full Stack Course FT
+ *    AUTOR: Jamer José Rebolledo Quiroz
+ *   GitHub: https://github.com/jamerrq
  * Linkedin: https://linkedin.com/in/jamerrq
+ */
+
+/**
  *
  * TAREA: Implementar la clase BinarySearchTree, definiendo los siguientes
           métodos recursivos:
@@ -16,16 +19,16 @@
   - contains: retorna true o false luego de evaluar si cierto valor existe
               dentro del árbol
 
-  - depthFirstForEach: recorre el árbol siguiendo el orden depth first (DFS)
-                       en cualquiera de sus variantes, según se indique por
+  - depthFirstForEach: recorre el árbol siguiendo el orden depth first (DFS) en
+                       cualquiera de sus variantes, según se indique por
                        parámetro ("post-order", "pre-order", o "in-order").
-                       Nota: si no se provee ningún parámetro, hará el
-                       recorrido "in-order" por defecto.
+                       Nota: si no se provee ningún parámetro, hará el recorrido
+                       "in-order" por defecto.
 
   - breadthFirstForEach: recorre el árbol siguiendo el orden breadth first (BFS)
 
-  El árbol utilizado para hacer los tests se encuentra representado
-  en la imagen bst.png dentro del directorio homework.
+  El árbol utilizado para hacer los tests se encuentra representado en la imagen
+  bst.png dentro del directorio homework.
 */
 
 class BinarySearchTree {
@@ -65,7 +68,8 @@ class BinarySearchTree {
             // Caso menor que (se inserta en la rama izquierda)
             if (value < this.value) {
                 if (!this.left) {
-                    // Si no existe una rama izquierda, se crea con el valor pasado
+                    // Si no existe una rama izquierda, se crea con el valor
+                    // pasado
                     this.left = new BinarySearchTree(value);
                 } else {
                     // En caso que exista una rama izquierda, se hace un llamado
@@ -77,7 +81,8 @@ class BinarySearchTree {
             // Caso mayor que (se inserta en la rama derecha)
             else {
                 if (!this.right) {
-                    // Si no existe una rama derecha, se crea con el valor pasado
+                    // Si no existe una rama derecha, se crea con el valor
+                    // pasado
                     this.right = new BinarySearchTree(value);
                 } else {
                     // En caso que exista una rama derecha, se hace un llamado
@@ -85,9 +90,9 @@ class BinarySearchTree {
                     this.right.insert(value);
                 }
             }
-            // Falta preguntarse, ¿qué pasaría con una colisión?
-            // Hasta ahora, se insertaría en la rama derecha, permitiendo valores
-            // duplicados, pero, ¿es esta la manera más eficiente de hacerlo? 🤔
+            // Falta preguntarse, ¿qué pasaría con una colisión? Hasta ahora, se
+            // insertaría en la rama derecha, permitiendo valores duplicados,
+            // pero, ¿es esta la manera más eficiente de hacerlo? 🤔
         }
         // Aumentamos el valor suponiendo una inserción exitosa
         this.sizeV++;
@@ -111,9 +116,8 @@ class BinarySearchTree {
 
     // Método depthFirstForEach: recorre el árbol siguiendo el orden depth first
     // (DFS) en cualquiera de sus variantes, según se indique por parámetro
-    // ("post-order", "pre-order", o "in-order").
-    // Nota: si no se provee ningún parámetro,
-    // hará el recorrido "in-order" por defecto.
+    // ("post-order", "pre-order", o "in-order"). Nota: si no se provee ningún
+    // parámetro, hará el recorrido "in-order" por defecto.
     depthFirstForEach(callback, order = "in-order") {
 
         // Me ayudé en este video:
@@ -135,7 +139,8 @@ class BinarySearchTree {
             callback(value);
         }
 
-        // EN-ORDEN: Primero la rama izquierda, luego la raíz, luego rama derecha
+        // EN-ORDEN: Primero la rama izquierda, luego la raíz, luego rama
+        // derecha
         else {
             if (this.left) this.left.depthFirstForEach(callback, order);
             callback(value);
@@ -143,10 +148,9 @@ class BinarySearchTree {
         }
     }
 
-    // Método breadthFirstForEach: recorre el árbol siguiendo el
-    // orden breadth first (BFS)
-    // Recibe como parámetros una función callback que se llamara sobre cada nodo
-    // visitado, y una raíz para hacer el llamado recursivo
+    // Método breadthFirstForEach: recorre el árbol siguiendo el orden breadth
+    // first (BFS) Recibe como parámetros una función callback que se llamara
+    // sobre cada nodo visitado, y una raíz para hacer el llamado recursivo
 
     breadthFirstForEach(callback = null, root = this) {
 
@@ -162,8 +166,8 @@ class BinarySearchTree {
             // Sacamos el primer nodo de la cola
             let v = queue.shift();
 
-            // Llamamos la función callback (si existe)
-            // sobre el valor del nodo actual
+            // Llamamos la función callback (si existe) sobre el valor del nodo
+            // actual
             if (callback) callback(v.value);
 
             // Si hay rama izquierda, la insertamos en la cola
@@ -177,35 +181,23 @@ class BinarySearchTree {
 }
 
 /*
-let tree = new BinarySearchTree();
-let valuesToInsert = [20, 15, 25, 5, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11,
-                      30, 35, 33, 31, 34];
+let tree = new BinarySearchTree(); let valuesToInsert = [20, 15, 25, 5, 17, 21,
+28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34];
 valuesToInsert.forEach(value => {tree.insert(value)});
 
-// BFS
-let bfsOrder = [];
-tree.breadthFirstForEach((val) => {bfsOrder.push(val)});
-console.log("BFS ORDER:\n", bfsOrder);
+// BFS let bfsOrder = []; tree.breadthFirstForEach((val) =>
+{bfsOrder.push(val)}); console.log("BFS ORDER:\n", bfsOrder);
 
-// DFS
-let dfsOrder = [];
-tree.depthFirstForEach((val) => {dfsOrder.push(val)}, "pre-order");
-console.log("\nDFS ORDER (pre-order):\n", dfsOrder);
+// DFS let dfsOrder = []; tree.depthFirstForEach((val) => {dfsOrder.push(val)},
+"pre-order"); console.log("\nDFS ORDER (pre-order):\n", dfsOrder);
 
-// DFS in-order
-let dfsOrderInOrder = [];
-tree.depthFirstForEach((val) => {dfsOrderInOrder.push(val)}, "in-order");
-console.log("\nDFS ORDER (in-order):\n", dfsOrderInOrder);
+// DFS in-order let dfsOrderInOrder = []; tree.depthFirstForEach((val) =>
+{dfsOrderInOrder.push(val)}, "in-order"); console.log("\nDFS ORDER
+(in-order):\n", dfsOrderInOrder);
 */
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
-
-let tree = new BinarySearchTree(20);
-let testArr = [];
-let valuesToInsert = [15, 25, 5, 17, 21, 28, 0, 14, 50, 1, 45, 13, 12, 11, 30, 35, 33, 31, 34];
-valuesToInsert.forEach(value => tree.insert(value));
-console.log(tree);
 
 module.exports = {
     BinarySearchTree,

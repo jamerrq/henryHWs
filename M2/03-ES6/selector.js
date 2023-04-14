@@ -1,3 +1,10 @@
+/**
+ * Solución Tarea # 03 Módulo 2 Henry Full Stack Course FT
+ *    AUTOR: Jamer José Rebolledo Quiroz
+ *   GitHub: https://github.com/jamerrq
+ * Linkedin: https://linkedin.com/in/jamerrq
+ */
+
 var traverseDomAndCollectElements = function (matchFunc, startEl, accum = []) {
 
     if (typeof startEl === "undefined") {

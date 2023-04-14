@@ -1,6 +1,13 @@
 // Crear un array vacío llamado 'toDoItems' Tu codigo acá:
 
-// const { escapeHtml } = require("markdown-it/lib/common/utils");
+/**
+ * Solución Tarea # 01 Módulo 2 Henry Full Stack Course FT
+ *    AUTOR: Jamer José Rebolledo Quiroz
+ *   GitHub: https://github.com/jamerrq
+ * Linkedin: https://linkedin.com/in/jamerrq
+ */
+
+const { escapeHtml } = require("markdown-it/lib/common/utils");
 
 let toDoItems = new Array(0);
 

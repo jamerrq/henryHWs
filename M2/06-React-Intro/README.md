@@ -1,5 +1,7 @@
 # HW 06: React-Intro | Ejercicios
 
+![npm t](./imgs/tests.png)
+
 ## **Duración estimada 🕒**
 
 2 horas

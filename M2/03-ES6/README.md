@@ -1,5 +1,8 @@
 # Selectores
 
+## Tests
+![tests](./imgs/tests.png)
+
 ### Ejecutando los tests
 
 Vamos a trabajar con los siguientes archivos:

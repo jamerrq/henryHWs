@@ -1,5 +1,11 @@
 # Homework CSS Avanzado
 
+## Desktop app
+![Desktop](./imgs/app_desktop.png)
+
+## Mobile version
+![Mobile](./imgs/app_mobile.png)
+
 ## Instrucciones
 
 ---

@@ -1,5 +1,8 @@
 # **M2 | Homework DOM - Ejercicios**
 
+## Tests
+![tests](./imgs/tests.png)
+
 ## **INSTRUCCIONES**
 
 ---

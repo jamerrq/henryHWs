@@ -1,5 +1,8 @@
 # Webpack World Wide
 
+## App
+![app](./imgs/app.png)
+
 ## Lectura Introductoria
 
 ### IIFEs

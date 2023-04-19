@@ -1,5 +1,7 @@
 # Ejercicio AJAX
 
+## App
+![app](./imgs/app.png)
 ## Pre-requisitos
 
 Antes de desarollar nuestro codigo de front-end necesitaremos un servidor al que pedirle los datos de nuestra app usando AJAX. Veremos como escribir estos servidores mas adelante cuando estudiemos backend y NodeJs; mientras tanto utilizaremos un servidor muy simple que tiene las capacidades que necesitamos para el ejercicio.

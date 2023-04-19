@@ -1,6 +1,10 @@
 # HW 06: React-Intro | Ejercicios
 
+## Tests
 ![npm t](./imgs/tests.png)
+
+## App
+![app](./imgs/app.png)
 
 ## **Duración estimada 🕒**
 

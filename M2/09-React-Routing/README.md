@@ -8,7 +8,7 @@
 ![app](./imgs/app.png)
 
 ## Integration
-![integration](./imgs/out.mp4)
+![integration](imgs/out.gif)
 [App Source Code](https://github.com/jamerrq/rick_and_morty)
 
 ## **Temas de la homework**

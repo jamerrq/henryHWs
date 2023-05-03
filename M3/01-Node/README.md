@@ -1,5 +1,8 @@
 # **Módulo 3 Back End | Node**
 
+## Tests
+![tests](./imgs/tests.png)
+
 ## **📌 Temas de la homework**
 
 -  Node.js

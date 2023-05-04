@@ -3,6 +3,12 @@
 ## Tests
 ![tests](./imgs/tests.png)
 
+## Integration
+![integration](./imgs/outv1.0.gif)
+![setup](./imgs/setup.png)
+
+[App Source Code](https://github.com/jamerrq/rickAndMortyFullStack)
+
 ## **📌 Temas de la homework**
 
 -  Web Server.js

@@ -8,6 +8,10 @@
 ### Promises
 ![callback_tests](imgs/promises_tests.png)
 
+## Integration
+![integration](imgs/outv2.0.gif)
+[App Source Code](https://github.com/jamerrq/rickAndMortyFullStack)
+
 ## **📌 Temas de la homework**
 
 -  Promesas

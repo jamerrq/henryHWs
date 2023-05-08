@@ -185,30 +185,51 @@ $Promise.prototype._callHandlers = function () {
 
 
 $Promise.resolve = (value) => {
+    // Si el valor no es una promesa, la envolvemos en una
     if (!(value instanceof $Promise)) {
+        // Devolvemos una nueva promesa con el valor resuelto
         return new $Promise((resolve) => {
             resolve(value);
         });
-    } else {
+    }
+    // Si el valor es una promesa, la devolvemos
+    else {
         return value;
     }
 };
 
 $Promise.all = (array) => {
-    if (!Array.isArray(array)) throw new TypeError('El argumento debe ser un array');
+    // Verificamos que el argumento sea un array
+    if (!Array.isArray(array))
+        throw new TypeError('El argumento debe ser un array');
+
+    // Creamos una nueva promesa
     return new $Promise((resolve, reject) => {
+        // Creamos un array para guardar los resultados
         let results = [];
+        // Creamos un contador para saber cuándo terminar
         let counter = 0;
+        // Iteramos sobre el array
         for (let i = 0; i < array.length; i++) {
-            $Promise.resolve(array[i]).then((value) => {
-                results[i] = value;
-                counter++;
-                if (counter === array.length) {
-                    resolve(results);
-                }
-            }, (error) => {
-                reject(error);
-            });
+            // Resolvemos cada promesa
+            $Promise.resolve(array[i]).then(
+                // En caso de éxito
+                (value) => {
+                    // Guardamos el resultado
+                    results[i] = value;
+                    // Aumentamos el contador
+                    counter++;
+                    // Si ya terminamos, resolvemos la promesa
+                    if (counter === array.length) {
+                        resolve(results);
+                    }
+                },
+
+                // En caso de error
+                (error) => {
+                    // Rechazamos la promesa
+                    reject(error);
+                });
         };
     });
 };

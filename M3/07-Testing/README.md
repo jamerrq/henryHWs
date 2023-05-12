@@ -3,6 +3,9 @@
 ## Tests
 ![tests](imgs/tests.png)
 
+## Integration (App Tests)
+![integration](imgs/app_tests.png)
+[App Source Code](https://github.com/jamerrq/rickAndMortyFullStack)
 
 ## **📌 Temas de la homework**
 
